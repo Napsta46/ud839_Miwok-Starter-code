@@ -22,8 +22,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity{
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        //Find the viewthat shows phrases category
+        //Find the view that shows phrases category
         TextView phrases =(TextView)findViewById(R.id.phrases);
 
         phrases.setOnClickListener(new View.OnClickListener(){
