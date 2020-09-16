@@ -17,31 +17,36 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
 
-        // create an ArrayList of Word object
-        ArrayList<Word>words = new ArrayList<Word>();
-        words.add(new Word("One","Lutti"));
-        words.add(new Word("Two","Otiiko"));
-        words.add(new Word("Three", "Tolookosu"));
-        words.add(new Word("Four","Oyyisa"));
-        words.add(new Word("Five","Massokka"));
-        words.add(new Word("Six", "Temmokka"));
-        words.add(new Word("Seven", "Kenekaku"));
-        words.add(new Word("Eight", "Kawinta"));
-        words.add(new Word("Nine", "Wo'e"));
-        words.add(new Word("Ten", "Na' aacha"));
+        // Create a list of words
+        ArrayList<Word> words = new ArrayList<Word>();
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("two", "otiiko"));
+        words.add(new Word("three", "tolookosu"));
+        words.add(new Word("four", "oyyisa"));
+        words.add(new Word("five", "massokka"));
+        words.add(new Word("six", "temmokka"));
+        words.add(new Word("seven", "kenekaku"));
+        words.add(new Word("eight", "kawinta"));
+        words.add(new Word("nine", "wo’e"));
+        words.add(new Word("ten", "na’aacha"));
 
-        WordAdapter itemsAdapter = new WordAdapter(this, words);
+        // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
+        // adapter knows how to create list items for each item in the list.
+        WordAdapter wordsAdapter = new WordAdapter(this,words);
 
+        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        // There should be a {@link ListView} with the view ID called list, which is declared in the
+        // activity_numbers.xml layout file.
         ListView listView = (ListView) findViewById(R.id.list);
 
-        listView.setAdapter(itemsAdapter);
-
-
+        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
+        // {@link ListView} will display list items for each {@link Word} in the list.
+        listView.setAdapter(wordsAdapter);
 
         //while (index < 10){
         // Log.v("NumberActivity", words.get(index));
         //  index++;
-
+//  sd
         //Log.v("NumbersActivity",Word.get(5));
     }
 }

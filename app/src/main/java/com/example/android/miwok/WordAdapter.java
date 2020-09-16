@@ -51,7 +51,7 @@ public class WordAdapter extends ArrayAdapter<Word>{
         //Check if the existing view is being reused , otherwise inflate the view
         View listItemView = convertView;
         if(listItemView == null) {
-                listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent, false);
         }
         //Get the {@link word} object located at this position in the list
         Word currentWord = getItem(position);

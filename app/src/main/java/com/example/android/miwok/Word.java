@@ -18,7 +18,7 @@ public class Word {
     //Drawable resource ID
     private int mImageResourceId;
 
-    public Word(String defaultTransaction, String miwokTranslation, int mImageResourceId){
+    public Word(String defaultTransaction, String miwokTranslation){
         mDefaultTranslation = defaultTransaction;
         mMiwokTranslation = miwokTranslation;
      //         mImageResourceId = imageResourceId;
@@ -37,13 +37,6 @@ public class Word {
     public String getmMiwokTranslation(){
 
         return mMiwokTranslation;
-    }
 
-    /**
-     * Get the image resource ID
-     */
-    public int getImageResourceId(){
-
-        return mImageResourceId;
     }
 }
